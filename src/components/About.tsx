@@ -18,9 +18,9 @@ const About = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-mint-light rounded-3xl -rotate-3 transform"></div>
                 <img 
-                  src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7" 
-                  alt="Consultório de psicologia" 
-                  className="rounded-3xl shadow-lg relative z-10 rotate-1 transform object-cover h-[400px] w-full"
+                  src="https://assets.bootstrapforfall.com/psychologist-transparent.png" 
+                  alt="Dra. Sofia Mendes" 
+                  className="rounded-3xl relative z-10 transform object-contain h-[400px] w-full"
                 />
               </div>
             </div>

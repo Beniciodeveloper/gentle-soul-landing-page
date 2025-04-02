@@ -1,4 +1,5 @@
-import { useEffect, useRef } from 'react';
+
+import React, { useEffect, useRef } from 'react';
 
 interface ScrollRevealProps {
   children: React.ReactNode;
@@ -18,7 +19,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
       ([entry], observer) => {
         const target = entry.target as HTMLElement;
 
-        // Se já foi revelado, não faz nada
+        // If already revealed, don't do anything
         if (target.dataset.revealed === "true") {
           observer.unobserve(target);
           return;
@@ -27,8 +28,8 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
         if (entry.isIntersecting) {
           setTimeout(() => {
             target.classList.add('active');
-            target.dataset.revealed = "true"; // Marca como revelado
-            observer.unobserve(target); // Para de observar para evitar que suma ao rolar para cima
+            target.dataset.revealed = "true"; // Mark as revealed
+            observer.unobserve(target); // Stop observing to prevent animation from reversing
           }, delay);
         }
       },
