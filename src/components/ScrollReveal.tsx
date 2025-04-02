@@ -1,4 +1,12 @@
 
+import React, { useRef, useEffect } from 'react';
+
+interface ScrollRevealProps {
+  children: React.ReactNode;
+  threshold?: number;
+  delay?: number;
+}
+
 const ScrollReveal: React.FC<ScrollRevealProps> = ({ 
   children, 
   threshold = 0.05,  // Ativa a animação com apenas 5% do elemento visível
