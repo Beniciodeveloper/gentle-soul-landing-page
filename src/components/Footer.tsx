@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between mb-12">
           <div className="mb-8 md:mb-0">
-            <h3 className="text-xl font-serif mb-4">Gentle Soul</h3>
+            <h3 className="text-xl font-serif mb-4">Sua marca</h3>
             <p className="text-white/70 max-w-xs">
               Um espaço seguro para sua jornada de autoconhecimento e bem-estar emocional.
             </p>
@@ -63,7 +63,7 @@ const Footer = () => {
         </div>
         
         <div className="pt-8 border-t border-white/20 text-center text-white/60 text-sm">
-          <p>&copy; {currentYear} Gentle Soul. Todos os direitos reservados.</p>
+          <p>&copy; {currentYear} Sua marca. Todos os direitos reservados.</p>
           <div className="mt-2 space-x-4">
             <a href="#" className="hover:text-white transition">Política de Privacidade</a>
             <a href="#" className="hover:text-white transition">Termos de Uso</a>
