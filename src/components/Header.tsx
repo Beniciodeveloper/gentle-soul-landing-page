@@ -15,7 +15,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
         <div className="flex items-center">
           <a href="#" className="flex items-center">
-            <h1 className="text-2xl font-bold text-lavender-dark font-serif">Gentle Soul</h1>
+            <h1 className="text-2xl font-bold text-lavender-dark font-serif">Sua marca</h1>
           </a>
         </div>
 

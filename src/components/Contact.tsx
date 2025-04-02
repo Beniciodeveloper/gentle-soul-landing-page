@@ -98,19 +98,9 @@ const Contact = () => {
               </div>
             </div>
             
-            <div className="mt-8 mb-8">
-              <a
-                href="https://wa.me/5571991017313?text=Olá! Gostaria de agendar uma consulta."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="whatsapp-button inline-flex"
-              >
-                Fale comigo no WhatsApp!
-              </a>
-            </div>
+           
             
-            <div className="mt-12">
-              <h4 className="font-medium mb-4">Nossa Localização</h4>
+            <div className="mt-12  flex justify-center items-center">
               <GoogleMap />
             </div>
           </div>

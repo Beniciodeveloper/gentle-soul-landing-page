@@ -14,11 +14,11 @@ const About = () => {
         
         <div className="flex flex-col md:flex-row items-center">
           <ScrollReveal delay={100}>
-            <div className="md:w-2/5 mb-8 md:mb-0">
+            <div className=" mb-8 md:mb-0">
               <div className="relative">
                 <div className="absolute inset-0 bg-mint-light rounded-3xl -rotate-3 transform"></div>
                 <img 
-                  src="https://assets.bootstrapforfall.com/psychologist-transparent.png" 
+                  src="./profissional.jpg" 
                   alt="Dra. Sofia Mendes" 
                   className="rounded-3xl relative z-10 transform object-contain h-[400px] w-full"
                 />

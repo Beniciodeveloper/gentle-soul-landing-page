@@ -37,7 +37,7 @@ const Hero = () => {
           <div className="relative">
             <div className="absolute inset-0 bg-mint rounded-3xl -rotate-3 transform"></div>
             <img 
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" 
+              src="./banner-pis.webp" 
               alt="Consultório de psicologia" 
               className="rounded-3xl shadow-xl relative z-10 rotate-2 transform object-cover h-[500px] w-full"
             />
