@@ -1,5 +1,4 @@
-
-import React, { useRef, useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 interface ScrollRevealProps {
   children: React.ReactNode;
@@ -9,7 +8,7 @@ interface ScrollRevealProps {
 
 const ScrollReveal: React.FC<ScrollRevealProps> = ({ 
   children, 
-  threshold = 0.05,  // Ativa a animação com apenas 5% do elemento visível
+  threshold = 0.05,  
   delay = 0
 }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -17,15 +16,20 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
+        const target = entry.target as HTMLElement;
+        
+        // Se o elemento já foi revelado, não faz nada
+        if (target.dataset.revealed === "true") return;
+
         if (entry.isIntersecting) {
           setTimeout(() => {
-            entry.target.classList.add('active');
+            target.classList.add('active');
+            target.dataset.revealed = "true"; // Marca como revelado
           }, delay);
-          observer.unobserve(entry.target);
         }
       },
       {
-        rootMargin: "50px",  // Faz com que o elemento seja detectado antes de aparecer totalmente
+        rootMargin: "50px",  
         threshold: threshold,
       }
     );
