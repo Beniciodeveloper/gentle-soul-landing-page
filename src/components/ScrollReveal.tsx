@@ -9,7 +9,7 @@ interface ScrollRevealProps {
 
 const ScrollReveal: React.FC<ScrollRevealProps> = ({ 
   children, 
-  threshold = 0.1,
+  threshold = 0.3,
   delay = 0
 }) => {
   const ref = useRef<HTMLDivElement>(null);
