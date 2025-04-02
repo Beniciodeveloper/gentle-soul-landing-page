@@ -1,15 +1,7 @@
 
-import { useEffect, useRef } from 'react';
-
-interface ScrollRevealProps {
-  children: React.ReactNode;
-  threshold?: number;
-  delay?: number;
-}
-
 const ScrollReveal: React.FC<ScrollRevealProps> = ({ 
   children, 
-  threshold = 0.3,
+  threshold = 0.05,  // Ativa a animação com apenas 5% do elemento visível
   delay = 0
 }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -25,6 +17,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
         }
       },
       {
+        rootMargin: "50px",  // Faz com que o elemento seja detectado antes de aparecer totalmente
         threshold: threshold,
       }
     );
