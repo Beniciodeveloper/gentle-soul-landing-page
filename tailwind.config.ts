@@ -63,20 +63,20 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				lavender: {
-					light: '#F1E8FF',
-					DEFAULT: '#D3BFFF',
-					dark: '#9A7FD1'
-				},
 				mint: {
 					light: '#E8FFF8',
 					DEFAULT: '#C2F0E2',
 					dark: '#7DBFAD'
 				},
+				lavender: {
+					light: '#F1E8FF',
+					DEFAULT: '#D3BFFF',
+					dark: '#9A7FD1'
+				},
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
-				serif: ['Playfair Display', 'serif'],
+				sans: ['Montserrat', 'sans-serif'],
+				serif: ['Lora', 'serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

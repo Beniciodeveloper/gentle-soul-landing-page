@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useState, FormEvent } from 'react';
+import GoogleMap from './GoogleMap';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -40,13 +41,13 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section bg-gradient-to-b from-white to-lavender-light/30">
+    <section id="contact" className="section bg-gradient-to-b from-white to-mint-light/30">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-serif font-medium mb-4 text-foreground animate-fade-in">
             Entre em Contato
           </h2>
-          <div className="h-1 w-24 bg-lavender-dark mx-auto rounded-full mb-8"></div>
+          <div className="h-1 w-24 bg-mint-dark mx-auto rounded-full mb-8"></div>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-12">
@@ -55,18 +56,18 @@ const Contact = () => {
             
             <div className="space-y-6">
               <div className="flex items-start">
-                <div className="mr-4 bg-lavender-light p-3 rounded-full text-lavender-dark">
+                <div className="mr-4 bg-mint-light p-3 rounded-full text-mint-dark">
                   📍
                 </div>
                 <div>
                   <h4 className="font-medium mb-1">Endereço</h4>
-                  <p className="text-foreground/80">Rua das Flores, 123 - Jardim Primavera</p>
-                  <p className="text-foreground/80">Salvador - BA, 40000-000</p>
+                  <p className="text-foreground/80">Av. Santos Dumont, 5017 - Jardim do Jockey</p>
+                  <p className="text-foreground/80">Lauro de Freitas - BA, 42700-000</p>
                 </div>
               </div>
               
               <div className="flex items-start">
-                <div className="mr-4 bg-lavender-light p-3 rounded-full text-lavender-dark">
+                <div className="mr-4 bg-mint-light p-3 rounded-full text-mint-dark">
                   📞
                 </div>
                 <div>
@@ -76,7 +77,7 @@ const Contact = () => {
               </div>
               
               <div className="flex items-start">
-                <div className="mr-4 bg-lavender-light p-3 rounded-full text-lavender-dark">
+                <div className="mr-4 bg-mint-light p-3 rounded-full text-mint-dark">
                   ✉️
                 </div>
                 <div>
@@ -86,7 +87,7 @@ const Contact = () => {
               </div>
               
               <div className="flex items-start">
-                <div className="mr-4 bg-lavender-light p-3 rounded-full text-lavender-dark">
+                <div className="mr-4 bg-mint-light p-3 rounded-full text-mint-dark">
                   🕒
                 </div>
                 <div>
@@ -97,7 +98,7 @@ const Contact = () => {
               </div>
             </div>
             
-            <div className="mt-8">
+            <div className="mt-8 mb-8">
               <a
                 href="https://wa.me/5571991017313?text=Olá! Gostaria de agendar uma consulta."
                 target="_blank"
@@ -107,10 +108,15 @@ const Contact = () => {
                 Fale comigo no WhatsApp!
               </a>
             </div>
+            
+            <div className="mt-12">
+              <h4 className="font-medium mb-4">Nossa Localização</h4>
+              <GoogleMap />
+            </div>
           </div>
           
           <div className="lg:w-1/2 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-lavender/20">
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-mint/20">
               <h3 className="text-xl font-serif font-medium mb-6">Envie uma Mensagem</h3>
               
               {isSubmitted ? (
@@ -179,7 +185,7 @@ const Contact = () => {
                   
                   <Button 
                     type="submit"
-                    className="w-full bg-lavender-dark hover:bg-lavender-dark/90"
+                    className="w-full bg-mint-dark hover:bg-mint-dark/90"
                   >
                     Enviar Mensagem
                   </Button>
