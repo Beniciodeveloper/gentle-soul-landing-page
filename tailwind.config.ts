@@ -68,11 +68,6 @@ export default {
 					DEFAULT: '#C2F0E2',
 					dark: '#7DBFAD'
 				},
-				lavender: {
-					light: '#F1E8FF',
-					DEFAULT: '#D3BFFF',
-					dark: '#9A7FD1'
-				},
 			},
 			fontFamily: {
 				sans: ['Montserrat', 'sans-serif'],

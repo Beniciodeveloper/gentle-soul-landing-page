@@ -1,4 +1,6 @@
 
+import { Instagram } from 'lucide-react';
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
@@ -42,6 +44,20 @@ const Footer = () => {
                 <li>(71) 99101-7313</li>
                 <li>contato@gentlesoul.com.br</li>
               </ul>
+              
+              <div className="mt-4">
+                <h4 className="font-medium mb-2 text-white/90">Redes Sociais</h4>
+                <div className="flex space-x-4">
+                  <a 
+                    href="https://instagram.com/gentlesoul" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors"
+                  >
+                    <Instagram size={20} />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
