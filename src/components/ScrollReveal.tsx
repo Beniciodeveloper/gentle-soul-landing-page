@@ -15,16 +15,20 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
   
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
+      ([entry], observer) => {
         const target = entry.target as HTMLElement;
-        
-        // Se o elemento já foi revelado, não faz nada
-        if (target.dataset.revealed === "true") return;
+
+        // Se já foi revelado, não faz nada
+        if (target.dataset.revealed === "true") {
+          observer.unobserve(target);
+          return;
+        }
 
         if (entry.isIntersecting) {
           setTimeout(() => {
             target.classList.add('active');
             target.dataset.revealed = "true"; // Marca como revelado
+            observer.unobserve(target); // Para de observar para evitar que suma ao rolar para cima
           }, delay);
         }
       },
